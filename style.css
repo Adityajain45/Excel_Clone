@@ -1,0 +1,375 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    font-size: 14;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    position: relative;
+}
+
+.title-bar {
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+   
+}
+
+.menu-bar {
+    height: 5vh;
+    background-color: #107c41;
+    display: flex;
+  
+}
+
+.menu-item {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #fff;
+    font-size: 18;
+    display: flex;
+    align-items: center;
+}
+
+.menu-item.selected {
+    background-color: #fff;
+    color: #107c41;
+}
+
+.menu-item.selected:hover {
+    background-color: #fff;
+    cursor: default;
+}
+
+.menu-item:hover {
+    background-color: #074f27;
+    cursor: pointer;
+}
+
+
+
+.menu-icon-bar {
+    height: 6vh;
+    background-color: rgb(241,241,241);
+    display: flex;
+    align-items: center;
+    
+   
+}
+
+.menu-icon {
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.font-family-selector {  
+    width: 150px;
+    font-family: 'Noto Sans';
+}
+
+.selector {
+    height: 30px;
+    font-size: 17px;
+}
+.selector option {
+    font-size: 17px;
+
+}
+
+
+.formula-bar {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+    background-color: rgb(241,241,241);
+   
+}
+
+.data-container {
+    height: 75vh;
+     display: flex;
+    flex-wrap: wrap; 
+   
+}
+
+.select-all { 
+    width: 30px;
+    height: 30px;
+    border: 1px solid  lightgray;
+}
+.column-name-container {
+    width: calc(100% - 30px);
+    /* width: 98%; */
+    height: 30px;
+    border: 1px solid  lightgray;
+    display: flex;
+    overflow: hidden;
+}
+
+.row-name-container {
+    width: 30px;
+    /* height: calc(75% - 15px);  */
+    height: 95.2%;
+    border: 1px solid lightgray;
+    overflow: hidden;
+}
+
+.input-cell-container{
+    /* width: 98%; */
+    width: calc(100% - 30px);
+    height: calc(75vh - 30px);
+    border: 1px solid  lightgray;
+    overflow: scroll;
+}
+
+.sheet-bar{
+    height: 4vh;
+    display: flex;
+    align-items: center;
+}
+
+.scroller {
+    width: 70px;
+}
+.icon-left-scroll, .icon-right-scroll {
+    font-size: 30px;
+}
+
+.icon-left-scroll:hover, .icon-right-scroll:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.icon-add{
+    color: #107c41;
+    width: 40px;
+}
+
+.icon-add:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.sheet-tab-container{
+    border: 1px solid lightgray;
+    width: calc(100vw-110px);
+    display: flex;
+}
+
+.sheet-tab {
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    width: 80px;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-right: 1px solid lightgray;
+
+}
+
+.sheet-tab.selected {
+    border-bottom: 4px solid #107c41;
+}
+
+.sheet-tab:hover {
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+.sheet-tab.selected:hover {
+    cursor: default;
+    background-color: #fff;
+}
+
+
+.column-name {
+   min-width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right:1px solid lightgrey ;
+    font-weight: bold;
+
+}
+
+.row-name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 25px;
+    border-bottom: 1px solid lightgray;
+    font-weight: bold;
+}
+
+.cell-row{
+    display: flex;
+}
+
+.input-cell {
+    min-width: 100px;
+    min-height: 25px;
+    border-right: 1px solid lightgrey; 
+    border-bottom: 1px solid lightgray;
+    outline-color: #107c41;
+    font-family: 'Noto Sans';
+    font-size: 14px;
+  
+}
+
+.input-cell.selected {
+
+    border: 2px solid #107c41 ;
+}
+
+.formula-editor {
+    height: 70%;
+    width: 110px;
+    border: 1px solid lightgrey;
+    background-color: #fff;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    align-items: center;
+}
+   
+.selected-cell {
+    width: 60%;
+}
+
+.function-sign{
+    width: 50px;
+     display: flex;
+   
+}
+
+.formula-input {
+    width:90%;
+    outline-color: #107c41;
+}
+
+pre{
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+}
+
+
+.menu-icon.selected {
+    background-color: lightgrey;
+}
+
+.input-cell.top-cell-selected {
+    border-top: none;
+}
+
+.input-cell.bottom-cell-selected {
+    border-bottom: 1px solid lightgrey ;
+}
+
+.input-cell.right-cell-selected {
+    border-right: 1px solid lightgray;
+}
+
+.input-cell.left-cell-selected {
+    border-left: none;
+}
+
+.color-picker {
+    position: absolute;
+    width: 26px;
+    height: 12px;
+    border: none;
+    padding: 0;
+    top: 30px;
+    left: 9px;
+    cursor: pointer;
+}
+
+.icon-color-fill, .icon-color-text{
+    position: relative;
+
+}
+
+.sheet-options-modal{
+    position: absolute;
+    bottom: 4vh;
+    background-color: #fff;
+    height: 60px;
+    width: 70px;
+   box-shadow: 0 0 3px 1px lightgray;
+}
+
+.sheet-rename,.sheet-delete {
+    height: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sheet-rename:hover,.sheet-delete:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+.sheet-rename-modal {
+    position: absolute;
+    height:180px;
+    width: 300px;
+    top: calc(100vh / 2 - 90px);
+    left: calc(100vw / 2 - 150px);
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0 3px 1px lightgray;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.modal-title{
+    font-size: 20px;
+}
+
+.new-sheet-name{
+    height: 26px;
+    font-size: 18px;
+    outline-color: #107c41;
+}
+
+.submit-button {
+    cursor: pointer;
+    background-color: #107c41;
+    color: white;
+    padding: 8px;
+}
+
+.cancel-button {
+    cursor: pointer;
+    background-color:  lightgray;
+    padding: 8px;
+}
+
